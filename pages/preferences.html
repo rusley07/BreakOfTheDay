@@ -1,0 +1,267 @@
+﻿<!DOCTYPE>
+<html>
+
+<!-- #BeginTemplate "../DWT/breaky.dwt" -->
+
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Break Of The Day</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="../CSS/breaky.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function validateForm()
+{
+if (userForm.firstname.value=="")// validating First Name
+    {
+        alert("Please enter your first name");
+		userForm.firstname.focus();
+		return false;
+    }
+if (userForm.lastname.value=="")// validating Last Name
+    {
+        alert("Please enter your last name");
+		userForm.firstname.focus();
+		return false;
+    }
+if (userForm.address.value=="")// validating an Address
+    {
+        alert("Please enter your address");
+		userForm.address.focus();
+		return false;
+    }
+if (userForm.suburb.value=="")// validating Suburb
+    {
+        alert("Please enter your suburb");
+		userForm.suburb.focus();
+		return false;
+    } 
+if (userForm.pcode.value=="")// validating Postcode
+    {
+        alert("Please enter your postcode");
+		userForm.pcode.focus();
+		return false;
+    }
+if (isNaN(userForm.pcode.value))
+	{
+		alert("Please enter numbers only.");
+		userForm.pcode.focus();
+		return false;
+	}
+if (userForm.pcode.value.length != 4)// validating the number of Digites
+	{
+		alert ("Your Postcode must contain four numbers");
+		userForm.pcode.focus();
+		return false;
+	}
+	
+if (userForm.email.value=="")// validating e-mail
+    {
+        alert("Please enter your e-mail");
+		userForm.email.focus();
+		return false;
+    }    
+if (userForm.email.value.indexOf("@")==-1)// validating e-mail for "@" symbol
+	{
+		alert("Your e-mail address must include @ symbol");
+		userForm.email.focus();
+		return false;
+	}
+if (userForm.email.value.indexOf(".")==-1)// validating e-mail for "." symbol
+	{
+		alert("Your e-mail address must include . symbol");
+		userForm.email.focus();
+		return false;
+	}
+if (userForm.placenumber.value=="")// validating e-mail
+    {
+        alert("Please enter your Place Number");
+		userForm.placenumber.focus();
+		return false;
+    }    
+if (isNaN(userForm.placenumber.value))
+	{
+		alert("Please enter numbers only.");
+		userForm.placenumber.focus();
+		return false;
+	}
+	else
+		{
+			alert ("You have entered your personal information");
+		}
+if (userForm.cardnumber.value=="")// validating Card Number
+    {
+        alert("Please enter your Card Number");
+		userForm.cardnumber.focus();
+		return false;
+    }
+if (userForm.cardnumber.value.length != 16)// validating the number of digites in Card Number
+	{
+		alert ("Your Credit Card Number must contain sixteen numbers");
+		userForm.cardnumber.focus();
+		return false;
+	}
+if (userForm.cvv.value=="")// validating CVV
+    {
+        alert("Please enter your cvv");
+		userForm.cvv.focus();
+		return false;
+    }
+if (userForm.cvv.value.length != 3)// validating the number of digites in CVV 
+	{
+		alert ("Your Security Number must contain three numbers");
+		userForm.cvv.focus();
+		return false;
+	}
+
+var currentDate; 
+var month;
+var year;
+currentDate = new Date();
+month = currentDate.getMonth()+1;
+year = currentDate.getFullYear();
+
+if (userForm.month.value<month && userForm.year.value==year)// validating the current Month and Year
+	{
+		alert ("Card expired");
+		userForm.month.focus();
+		return false;
+	}
+if (userForm.month.value>=month && userForm.year.value==year && userForm.year.value>year)
+	{
+		alert ("Card valid");
+	}
+	alert("Thank you for your submission!");
+	return true;
+}
+</script>
+<!-- #EndEditable -->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link href="../CSS/breaky.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="masthead">
+	<div id="logo">
+	<img src="../Images/potatoes.jpg" alt="Mashed Potatoes" width="200px"/>
+	</div>
+	<div id="header">
+	Break Of The Day
+	</div>
+</div>
+<div id="logo">
+	<img src="../Images/potatoes.jpg" alt="Mashed Potatoes" width="200px"/>
+	</div>
+	<div id="header">
+	Break Of The Day
+</div>
+<div id="container">
+	<div id="left_col">
+	<a href="../index.html" alt="Home Page">Home</a><br>
+	<br>
+	<a href="../pages/preferences.html" alt="Pref Page">Preferences</a><br>
+	<br>
+	<a href="../pages/helppage.html" alt="Help Page">Help</a><br>
+	<br>
+	<a href="../pages/chiefs_special.html" alt="Chief's">Chief's Special</a><br>
+	<br>
+	<a href="../pages/contact.html" alt="Contact Us Page">Contact Us</a><br>
+	<br>
+	</div>
+	<!-- #BeginEditable "pagecontent" -->
+	<div id="page_content">
+	<form name="userForm" method="post" onsubmit="return validateForm()">
+	Your Details:
+    <br /><br />
+    Your First Name: <input type="text" name="firstname" size="20" />
+    <br /><br />
+    Your Last Name: <input type="text" name="lastname" size="20" />
+    <br /><br />
+    Address: <input type="text" name="address" size="50" />
+    <br /><br />
+    Suburb: <input type="text" name="suburb" size="20" />
+    Postcode: <input type="text" name="pcode" size="4" />
+    <br /><br />
+    Email address: <input type="text" name="email" size="40" />
+    <br /><br />
+    Market Place Number: <input type="text" name="placenumber" size="3" />
+    <br /><br />
+    <hr/>
+	The Best Time To Eat is:
+	<br/>
+	<input type="radio" name="timetable" value="eattime" />6.00am to 6.30am
+	<br/>
+	<input type="radio" name="timetable" value="eattime" />6.30am to 7.00am
+	<br/>
+	<input type="radio" name="timetable" value="eattime" />7.00am to 7.30am
+	<br/>
+	<input type="radio" name="timetable" value="eattime" />7.30am to 8.00am
+	<br/><br/>
+	What Would You Eat:
+	<select name="meal">
+		<option value="golub">Golubtsy</option>
+		<option value="zrazy">Zrazy</option>
+		<option value="liver">Potato and Liver</option>
+		<option value="oliv">Main and Olivye</option>
+		<option value="vini">Main and Vinigret</option>
+		<option value="kotl">Potato and Kotlety</option>
+		<option value="mlyn">Mlyntsi with cottage cheese or meat</option>
+		<option value="varen">Varenyky with strawberries</option>
+	</select>
+	<hr/>
+	Credit Card Details:
+<br/><br/>
+Card Number: <input type="text" name="cardnumber" size="16" />
+<br/>
+CVV: <input type="text" name="cvv" size="3" />
+<br/><br/>
+Type: <select name="cardtype">
+<option value="visa">Visa</option>
+<option value="mastercard">Master Card</option>
+<option value="american">American Express</option>
+</select>
+Expiry Date: <select name="month">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+<select name="year">
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+</select>
+<hr/>
+	<br/><br/>
+	<input type="submit" name="submit" value="submit"/>
+	<a href="mailto:ruslan.batura@yahoo.com.au">
+	</a>
+	<br/><br/>
+	<a href="help.html" alt="Help Page">
+    <input type="button" value="help"/>
+    </a>
+	<input type="reset" name="reset" value="Clear your answers and start again"/>
+	<br/>
+</form>
+	</div>
+<!-- #EndEditable -->
+</div>
+<div id="footer">
+&copy Copyright &reg Ruslan
+</div>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

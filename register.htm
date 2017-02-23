@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>Registration </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link href="eCommerceStyles.css" rel="stylesheet" type="text/css"  />
+
+    </head>
+
+    <body>
+        <p align="center" class="ReportHeader">Registration </p>
+        <p>Please Register user details.</p>
+
+        <form name="form1" method="post" action="register.php">
+
+            <table border="1">
+                <tr>
+                    <td width="200">
+                        Name
+                    </td>
+                    <td width="300">
+                        <input name="name" type="text" id="name" size="30" maxlength="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input name="password" type="password" id="password" size="30" maxlength="30"></td>
+                </tr>
+                <tr>
+                    <td >Re-type the Password </td>
+                    <td><input name="repeatpassword" type="password" id="repeatpassword" size="30" maxlength="30"></td>
+                </tr>
+
+                <tr>
+                    <td>E-mail</td>
+                    <td><input name="email" type="text" id="email" size="30" maxlength="30"></td>
+                </tr>
+
+                <tr>
+                    <td height="70"><input type="submit" name="Submit" value="Submit"></td>
+                    <td><input type="reset"  value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
