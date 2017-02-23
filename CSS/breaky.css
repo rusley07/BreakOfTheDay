@@ -1,0 +1,114 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	background: url('../Images/Lengyel 94 rushnyk bright colors brod angl.jpg') right bottom;
+
+}
+
+#masthead {
+	height: 150px;
+	background-image:url('../Images/imagesCA5R9RAE.jpg');
+	width: 100%;
+	position: absolute;
+	
+}
+
+#logo {
+	float: left;
+	width: 200px;
+}
+
+#header {
+	margin-left: 300px;
+	font-size: 90px;
+	font-style: italic;
+	color: lime;
+	position: absolute;
+	width: 75%;
+}
+
+.gallerycontainer{
+	position:relative;
+}
+
+.thumbnail:hover img{ 
+	border:1px solid white;
+	margin:0 5px 5px 0;
+}
+
+.thumbnail span{ 
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+border: 1px dashed gray;
+visibility: hidden;
+text-decoration: none;
+}
+
+.thumbnail span img{ 
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{  
+visibility: visible;
+top: 0;
+left: 230px; 
+z-index: 50;
+}
+
+
+#container {
+	clear: both;
+	min-width: 600px;
+}
+
+a:link
+{
+	color:#FFD700
+}
+a:visited
+{
+	color:#FF4500
+}
+a:hover
+{
+	color:#3CB371
+}
+a:active
+{
+	color:#0000FF
+}
+
+#left_col {
+	float: left;
+	width:190px;
+	position: absolute;
+	top:150px;
+	padding-left:10px;
+	font-size:18px;
+	background-color:#D6EBFF;
+	bottom: 0px;
+	opacity:0.8;
+}
+
+#page_content {
+	border-radius: 10px;
+	background-color: #FFFFCC;
+	color: #808000;
+	margin-left: 300px;
+	position: absolute;
+	top: 180px;
+	font-size: medium;
+}
+
+#footer {
+	position: absolute;
+	width: 95%;
+	top: 90%;
+	text-align: right;
+	color:black;
+	font-style:italic;
+	font-size:large;
+	font-weight:bold;
+}
